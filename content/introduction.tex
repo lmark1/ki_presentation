@@ -1,4 +1,5 @@
-\section{Introdution}
+
+\section{Introduction}
 
 \begin{frame}
 	\frametitle{Research Area}
@@ -17,8 +18,38 @@
 \end{frame}
 
 \begin{frame}
-	\frametitle{Why Manifolds?}
+	\frametitle{Which Manifolds?}
+	
 	\begin{itemize}
-		\item Model dynamics represented as a Lagrangian / Hamiltonian system - compact
+		\item UAV configuration space:
+	\end{itemize}
+	
+	\begin{equation*}
+		\zeta = [x, y, z, \phi, \theta, \psi] \in \mathbb{R}^6 
+		\xleftrightarrow[f_{\zeta_0}^{-1}(\zeta)]{f_{\zeta_0}(\zeta)}
+		\begin{bmatrix}
+		\text{R} & \textbf{p} \\
+		\textbf{0} & 1
+		\end{bmatrix}_{4\times 4} \in \text{SE(3)} \, , \; \text{R} \in \text{SO(3)}
+	\end{equation*}
+	
+	\begin{itemize}
+		\item Lie Group
+		\begin{itemize}
+			\item set of smooth differentiable manifolds
+			\item group multiplication and inversion properties
+			\item e.g. SO(3), SE(3), $\text{S}^2$
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Why manifolds?}
+	
+	\begin{itemize}
+		\item Compact model dynamics represented as a Lagrangian / Hamiltonian system
+		\item Coordinate-free approach
+		\item No singularities
+		\item No ambiguities
 	\end{itemize}
 \end{frame}
