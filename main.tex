@@ -94,28 +94,25 @@
 \end{frame}
 
 \begin{frame}
-\frametitle{Title slidea - two column slide}
-\begin{columns}
-\begin{column}{0.5\textwidth}
-  \begin{itemize}
-	\item[] content, cool content
-	\end{itemize}
-\end{column}
-\begin{column}{0.5\textwidth}  %%<--- here
-    \begin{center}
-     \includegraphics[width=0.85\textwidth]{figures/unizg}
-     \end{center}
-\end{column}
-\end{columns}
+	\frametitle{Table of Contents}
+	\tableofcontents
 \end{frame}
 
-\begin{frame}
-\frametitle{Title slidea - slide s literaturom}
-Iso medo u sumicu \footcite{clanak}
-\end{frame}
+\AtBeginSection[]
+{
+	\begin{frame}<beamer>
+		\frametitle{Table of Contents}
+		\tableofcontents[currentsection]
+	\end{frame}
+}
+
+\input{content/introduction.tex}
+\input{content/geometric_control.tex}
+\input{content/passive_decomposition.tex}
+\input{content/conclusion.tex}
 
 \section*{Literatura}
-\begin{frame}[allowframebreaks]{Literatura}
+\begin{frame}[allowframebreaks]{References}
 \printbibliography
 \end{frame}
 
