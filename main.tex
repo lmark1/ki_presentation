@@ -1,0 +1,122 @@
+% arara: pdflatex
+% !arara: animate: {delay: 80}
+% !arara: indent: {overwrite: yes, localSettings: yes}
+\documentclass[aspectratio=43,mathserif]{beamer}
+%\documentclass[handout,mathserif]{beamer}
+\usepackage{caption}
+\usepackage{amsmath}
+\usepackage{booktabs}
+\usepackage{etoolbox}
+\usepackage{multirow}
+\usepackage{pgfplots}
+\usepackage[]{media9}
+\usetikzlibrary{positioning}
+\usetikzlibrary{fit}
+\usetikzlibrary{backgrounds}
+\usetikzlibrary{calc}
+\usetikzlibrary{shapes}
+\usetikzlibrary{mindmap}
+\usetikzlibrary{decorations.text}
+\pgfplotsset{compat=1.7}
+\let\bbordermatrix\bordermatrix
+\patchcmd{\bbordermatrix}{8.75}{4.75}{}{}
+\patchcmd{\bbordermatrix}{\left(}{\left[}{}{}
+\patchcmd{\bbordermatrix}{\right)}{\right]}{}{}
+
+\usepackage[english]{babel}
+
+\usepackage[style=mla,backend=bibtex]{biblatex}
+
+\usetheme[titlepagelogo=figures/fer,
+  secondlogo = true,
+  thirdlogo = true,
+  color=larics,
+  language=custom,
+  bullet=square,
+  ]{TorinoTh}
+  
+\titlepagesecondlogo{figures/unizg}
+\titlepagethirdlogo{figures/larics_light}
+\author{mag. ing. Lovro Markovic}
+\setcandidatelabel{Candidate}
+\setrellabel{Supervisor}
+\setsubject{PhD Qualifying Exam}
+\rel{prof. dr. sc. Stjepan Bogdan}
+\title[PhD Qualifying Exam]{State-of-the-Art Survey of Manifold Based Control Methods for	Unmanned Aerial Vehicles}
+
+\ateneo{Faculty of Electrical Engineering and Computing, University of Zagreb}
+\date{Zagreb, 9.3.2020.}
+\usepackage{subfigure}
+\usepackage{multirow}
+\newcommand{\backupbegin}{
+   \newcounter{framenumberappendix}
+   \setcounter{framenumberappendix}{\value{framenumber}}
+}
+\newcommand{\backupend}{
+   \addtocounter{framenumberappendix}{-\value{framenumber}}
+   \addtocounter{framenumber}{\value{framenumberappendix}} 
+}
+
+% tikzmark command, for shading over items
+\newcommand{\tikzmark}[1]{\tikz[overlay,remember picture] \node (#1) {};}
+
+% standard enumeration
+%\setbeamertemplate{enumerate items}{(\arabic{enumi})}
+
+% default itemize
+\setbeamertemplate{itemize items}[circle]
+
+% transparency
+\setbeamercovered{transparent=15}
+
+% for resuming lists across frames
+\newcounter{savedenum}
+\newcommand*{\saveenum}{\setcounter{savedenum}{\theenumi}}
+\newcommand*{\resume}{\setcounter{enumi}{\thesavedenum}}
+
+% title
+\tikzset{
+   invisible/.style={opacity=0},
+   visible on/.style={alt=#1{}{invisible}},
+   alt/.code args={<#1>#2#3}{%
+      \alt<#1>{\pgfkeysalso{#2}}{\pgfkeysalso{#3}} % \pgfkeysalso doesn't change the path
+   },
+}
+
+%\includeonlyframes{daytoday}
+
+% add references
+\addbibresource{./bibliography/Mendeley.bib}
+
+\begin{document}
+\begin{frame}[plain, noframenumbering]
+\titlepage
+\end{frame}
+
+\begin{frame}
+\frametitle{Title slidea - two column slide}
+\begin{columns}
+\begin{column}{0.5\textwidth}
+  \begin{itemize}
+	\item[] content, cool content
+	\end{itemize}
+\end{column}
+\begin{column}{0.5\textwidth}  %%<--- here
+    \begin{center}
+     \includegraphics[width=0.85\textwidth]{figures/unizg}
+     \end{center}
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}
+\frametitle{Title slidea - slide s literaturom}
+Iso medo u sumicu \footcite{clanak}
+\end{frame}
+
+\section*{Literatura}
+\begin{frame}[allowframebreaks]{Literatura}
+\printbibliography
+\end{frame}
+
+\end{document}

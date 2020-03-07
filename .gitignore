@@ -1,0 +1,13 @@
+*.soc
+*.aux
+*.log
+*.toc
+*.blg
+*.soc
+*.gz
+*.out
+*.bbl
+*.xml
+*.nav
+*.snm
+/*.pdf
