@@ -2,8 +2,25 @@
 
 \begin{frame}
 	\frametitle{Geometric Mechanics}
-\end{frame}
-
-\begin{frame}
-	\frametitle{Geometric Control}
+	
+	\begin{itemize}
+		\item Introduced by:
+		\begin{itemize}
+			\item F. Bullo and A. Lewis, 2005. \footcite{bulloBook}
+			\item T. Lee, 2008. \footcite{Taeyoung Lee, Computational geometric mechanics and control of rigid bodies}
+			\item T. Lee et al. 2018. \footcite{LeeModel} 
+		\end{itemize}
+		\item UAV dynamic equation:
+	\end{itemize}
+	
+	\begin{equation}
+	m \ddot{\textbf{x}} + m g\textbf{e}_3 = f\text{R}\textbf{e}_3 \label{model1}
+	\end{equation}
+	\begin{equation}
+		\text{J}\dot{\mb{\Omega}} + \mb{\Omega} \times \text{J}\mb{\Omega} = \textbf{M} \label{model2}
+	\end{equation}
+	\begin{equation}                       
+	\dot{\text{R}} = \text{R}\widehat{\mb{\Omega}} \label{model3}
+	\end{equation}
+	
 \end{frame}

@@ -28,6 +28,21 @@
 
 \usepackage[style=mla,backend=bibtex]{biblatex}
 
+%calligraphy packages
+\usepackage{calrsfs}
+\DeclareMathAlphabet{\pazocal}{OMS}{zplm}{m}{n}
+\newcommand{\Ca}{\pazocal{C}}
+\newcommand{\Oa}{\pazocal{O}}
+\newcommand{\Va}{\pazocal{V}}
+\newcommand{\Ua}{\pazocal{U}}
+\newcommand{\Aa}{\pazocal{A}}
+\newcommand{\Ta}{\pazocal{T}}
+\newcommand{\La}{\pazocal{L}}
+\newcommand{\Ja}{\pazocal{J}}
+\newcommand{\Ma}{\pazocal{M}}
+\newcommand{\Na}{\pazocal{N}}
+\newcommand{\mb}[1]{\boldsymbol{#1}}
+
 \usetheme[titlepagelogo=figures/fer,
   secondlogo = true,
   thirdlogo = true,
@@ -88,7 +103,6 @@
 
 % add references
 \addbibresource{./bibliography/Mendeley.bib}
-
 \begin{document}
 \begin{frame}[plain, noframenumbering]
 \titlepage
