@@ -1,9 +1,20 @@
 \section{Passive Decomposition}
 
 \begin{frame}
-	\frametitle{Passive Decomposition}
+	\frametitle{Passive Decomposition (1)}
 	
 	\begin{itemize}
 		\item First introduced by D. Lee 2008. \footcite{LeePassive}
+		\item Proposed system dynamics split:
+		\begin{itemize}
+			\item Shape	- internal configuration of each robot
+			\item Locked - current overall behavior of multiple robot systems 
+			\item Coupled - interaction between locked and shape dynamics
+		\end{itemize}
+		\item Passive decomposition
+		\begin{itemize}
+			\item Applying a control law to cancel the dynamics coupling terms without energy generation
+			\item Enforces energetic passivity
+		\end{itemize}
 	\end{itemize}
 \end{frame}
