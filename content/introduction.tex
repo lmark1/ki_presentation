@@ -23,14 +23,17 @@
 	\begin{itemize}
 		\item UAV configuration space:
 	\end{itemize}
-	\begin{equation*}
-		\zeta = [x, y, z, \phi, \theta, \psi] \in \mathbb{R}^6 
+	\begin{equation}
+		\zeta = [x, y, z, \phi, \theta, \psi] 
 		\xleftrightarrow[f_{\zeta_0}^{-1}(\zeta)]{f_{\zeta_0}(\zeta)}
-		\begin{bmatrix}
+		\text{T} = \begin{bmatrix}
 		\text{R} & \textbf{p} \\
 		\textbf{0} & 1
-		\end{bmatrix}_{4\times 4} \in \text{SE(3)} \, , \; \text{R} \in \text{SO(3)}
-	\end{equation*}
+		\end{bmatrix}_{4\times 4} 
+	\end{equation}
+	\begin{equation}
+		\zeta \in \mathbb{R}^6  \, , \; \text{T} \in \text{SE(3)} \, , \; \text{R} \in \text{SO(3)}
+	\end{equation}
 	
 	\begin{itemize}
 		\item Lie Group

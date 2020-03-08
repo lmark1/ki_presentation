@@ -20,7 +20,7 @@
 \end{frame}
 
 \begin{frame}
-	\frametitle{Passive Decomposition - Application \footcite{passive-decomp-quadrotor-with-robotic-manip}        \footcite{decoupled-aerial-manipulation}}
+	\frametitle{Passive Decomposition - QM systems \footcite{passive-decomp-quadrotor-with-robotic-manip}     \footcite{decoupled-aerial-manipulation}}
 	
 	\begin{columns}
 		\begin{column}{0.5\textwidth}\centering
@@ -33,10 +33,15 @@
 		
 		\begin{column}{0.5\textwidth}\centering
 			\begin{itemize}
-			\item Quadrotor-manipulator system dynamics can be completely decoupled into:
+			\item Decoupled quadrotor-manipulator(QM) system:
 			\begin{itemize}
-				\item the center-of-mass dynamics in E(3)
-				\item Lagrange dynamics of robotic manipulator with full-actuation and no gravity effect
+				\item center-of-mass dynamics in E(3)
+				\item Robotic manipulator Lagrange dynamics
+			\end{itemize}
+			\item End-effector control law:
+			\begin{itemize}
+				\item Backstepping-like $\text{controller}^{15}$
+				\item PID $\text{cascade}^{16}$
 			\end{itemize}
 			\end{itemize}
 		\end{column}
@@ -44,5 +49,15 @@
  \end{frame}
 
 \begin{frame}
-	\frametitle{Passive Decomposition - Payload Transportation}
+	\frametitle{Passivity Based Control - Payload Transportation}
+	\begin{itemize}
+		\item General formation and internal control laws by C. Meissen et al. 2017. \footcite{passivity-based-formation-load}
+		\item An Interconnection and Damping Assignment -
+		Passivity Based Control (IDA-PBC) for payload swing suppression by M E. Guerrero et al. 2015. \footcite{passivity-based-payload-minimum-swing}
+		\item Master-slave transportation strategy with human-in-the-loop by P. Prajapati et al. 2019. \footcite{payload-and-human}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Passivity Based Control - Aerial Compliance}
 \end{frame}
