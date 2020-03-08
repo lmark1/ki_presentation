@@ -44,16 +44,16 @@
 		\begin{itemize}
 			\item UAV configuration space:
 		\end{itemize}
-		\begin{equation}
-			\zeta = [x, y, z, \phi, \theta, \psi] 
-			\xleftrightarrow{\varphi}
+		\begin{equation}			
 			\text{T} = \begin{bmatrix}
 			\text{R} & \textbf{p} \\
 			\textbf{0} & 1
 			\end{bmatrix}
+			\xleftrightarrow{\varphi}
+			\zeta = [x, y, z, \phi, \theta, \psi] 
 		\end{equation}
 		\begin{equation}
-			\zeta \in \mathbb{R}^6  \, , \; \text{T} \in \text{SE(3)} \, , \; \text{R} \in \text{SO(3)}
+			\text{R} \in \text{SO(3)} \, , \; \text{T} \in \text{SE(3)} \, , \; \zeta \in \mathbb{R}^6 
 		\end{equation}
 		
 		\begin{itemize}
