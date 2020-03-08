@@ -29,30 +29,44 @@
 
 \begin{frame}
 	\frametitle{Why Manifolds? (1)}
+	\begin{columns}
+		
+		\begin{column}{0.4\textwidth}\centering
+			\begin{figure}[H]
+				\includegraphics[width=0.9\columnwidth]{figures/manifold.png}	
+				\centering
+				\caption{Manifold $\Ma$, Euclidean space $\mathbb{R}^n$ and transport maps $\varphi$.\footnotemark}
+				\label{fig:aerial_manip}
+			\end{figure}
+		\end{column}
 	
-	\begin{itemize}
-		\item UAV configuration space:
-	\end{itemize}
-	\begin{equation}
-		\zeta = [x, y, z, \phi, \theta, \psi] 
-		\xleftrightarrow[f_{\zeta_0}^{-1}(\zeta)]{f_{\text{T}_0}(\text{T})}
-		\text{T} = \begin{bmatrix}
-		\text{R} & \textbf{p} \\
-		\textbf{0} & 1
-		\end{bmatrix}_{4\times 4} 
-	\end{equation}
-	\begin{equation}
-		\zeta \in \mathbb{R}^6  \, , \; \text{T} \in \text{SE(3)} \, , \; \text{R} \in \text{SO(3)}
-	\end{equation}
-	
-	\begin{itemize}
-		\item Lie Group
+	\begin{column}{0.6\textwidth}\centering
 		\begin{itemize}
-			\item set of smooth differentiable manifolds
-			\item group multiplication and inversion properties
-			\item e.g. SO(3), SE(3), $\text{S}^2$
+			\item UAV configuration space:
 		\end{itemize}
-	\end{itemize}
+		\begin{equation}
+			\zeta = [x, y, z, \phi, \theta, \psi] 
+			\xleftrightarrow{\varphi}
+			\text{T} = \begin{bmatrix}
+			\text{R} & \textbf{p} \\
+			\textbf{0} & 1
+			\end{bmatrix}
+		\end{equation}
+		\begin{equation}
+			\zeta \in \mathbb{R}^6  \, , \; \text{T} \in \text{SE(3)} \, , \; \text{R} \in \text{SO(3)}
+		\end{equation}
+		
+		\begin{itemize}
+			\item Lie Group
+			\begin{itemize}
+				\item set of smooth differentiable manifolds
+				\item group multiplication and inversion properties
+				\item e.g. SO(3), SE(3), $\text{S}^2$
+			\end{itemize}
+		\end{itemize}
+	\end{column}
+	\footnotetext[1]{Vladim Belov, "On Geometry and Symmetries in Classical and Quantum Theories of Gauge Gravity"}
+	\end{columns}
 \end{frame}
 
 \begin{frame}
