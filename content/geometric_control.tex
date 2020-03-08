@@ -36,7 +36,7 @@
 		\item First developed by T. Lee et al. 2010. \footcite{LeeClanak4}
 		\item Robust variant by T. Lee et al. 2011. \footcite{LeeClanak3}
 		\item L1 Aadaptive controller by Kotaru et al. 2019. \footcite{Kotaru2019GeometricLA}
-		\item Parameter tuning optimization by S. Lee et al. 2019. \footcite{Lee 2019}
+		\item Parameter tuning optimization by S. Lee et al. 2019. \footcite{Lee2019}
 	\end{itemize}
 \end{frame}
 
@@ -48,7 +48,7 @@
 			\begin{figure}[H]
 				\includegraphics[width=0.8\columnwidth]{figures/uav.png}	
 				\centering
-				\caption{Two UAVs endowed with variable moving masses (left) and manipulator carried payload (right). }
+				\caption{Two UAVs endowed with variable center of gravity by moving masses and manipulator carried payload (top). Position tracking results (right). }
 				\label{fig:uav_model}
 			\end{figure}
 		\end{column}
@@ -61,4 +61,37 @@
 			\end{figure}
 		\end{column}
 	\end{columns}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Gemetric Control - Transportation Tasks (1)}
+	
+	\begin{itemize}
+		\item Introduced by T. Lee and V. Kumar 2013. \footcite{cable-load1}
+		\item Variations with multiple quadrotors presented by A. Goodarzi and T. Lee 2015. \footcite{cable-load-multiple} and T. Lee 2014. \footcite{Lee2014GeometricCO}
+		\item Adaptive control with unknown mass variations by A. Goodarzi and T. Lee 2015 \footcite{flexible-cable-dynamics} and A. Goodarzi et al. 2013. \footcite{stabilization-flexible-cable}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Geometric Control - Trasnportation Tasks (2)}
+	
+	\begin{columns}
+		\begin{column}{0.5\textwidth}\centering
+			\begin{itemize}
+				\item Multiple quadrotor UAVs carrying a rigid body payload via cables
+				\item Cable configuration is defined in $\text{S}^2$ - spherical Lie group
+				\item Complete system configuration is defined by $\text{SE(3)} \times \text{S}^2$
+				\item Payload position and attitude tracking problem
+			\end{itemize}
+		\end{column}
+		
+		\begin{column}{0.5\textwidth}\centering
+			\begin{figure}[H]
+				\includegraphics[width=\columnwidth]{figures/payload_carrying.png}	
+				\centering
+			\end{figure}
+		\end{column}
+	\end{columns}
+		
 \end{frame}
